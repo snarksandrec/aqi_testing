@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AQI</title>
+  <script src="aqi.js"></script>
+  <link rel='stylesheet' href='style.css'>
+  <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class='time' id="time"></div>
+    <div class='aqi-container' id="containerPm25">
+      <div class='aqi-label'>AQI (PM2.5)</div>
+      <div class='aqi' id="aqiPm25"></div>
+      <div class='pm-label' id="pm25"></div>
+    </div>
+    <div class='aqi-container' id="containerPm10">
+      <div class='aqi-label'>AQI (PM10)</div>
+      <div class='aqi' id="aqiPm10"></div>
+      <div class='pm-label' id="pm10"></div>
+    </div>
+    <div class='aqi-outside'><iframe height="230"
+        src="https://widget.airnow.gov/aq-dial-widget/?city=Reseda&state=CA&country=USA"
+        style="border: none; border-radius: 10px;" width="230"></iframe>
+    </div>
+    <div class='quotes'>
+      <marquee behavior="scroll" direction="up" scrollamount=2>
+        <p>she's really getting under my nerves!
+          <br><span class='quote-source'>the challenge</span>
+        </p>
+        <p>my butthole is in my throat!
+          <br><span class='quote-source'>teenage bounty hunters</span>
+        </p>
+        <p>natey, did you lock the eggs??
+          <br><span class='quote-source'>erin</span>
+        </p>
+        <p>underneath of it
+          <br><span class='quote-source'>cold case files</span>
+        </p>
+        <p>puttin' here there
+          <br><span class='quote-source'>cold case files</span>
+        </p>
+        <p>why does she get away scotch-free?
+          <br><span class='quote-source'>selling sunset</span>
+        </p>
+        <p>she was shitting and throwing her brains out
+          <br><span class='quote-source'>selling sunset</span>
+        </p>
+        <p>in and out of itself
+          <br><span class='quote-source'>selling sunset</span>
+        </p>
+        <p>lubilo's baga grill
+          <br><span class='quote-source'>michelle</span>
+        </p>
+        <p>i'm not gonna throw this axe away so we better jazz it!
+          <br><span class='quote-source'>buzfeed unsolved: true crime</span>
+        </p>
+        <p>our doctor is unfortunately deceased. he was ran over god bless him.
+          <br><span class='quote-source'>botched</span>
+        </p>
+        <p>oh, it doesn't have good potato. uh ... tomato.
+          <br><span class='quote-source'>michelle</span>
+        </p>
+        <!--<p>quote             
+            <br><span class='quote-source'>source</span>
+          </p>-->
+      </marquee>
+    </div>
+    <div class="chart">
+      <table border="0" width="200%" cellspacing="2" cellpadding="5">
+        <tbody>
+          <tr bgcolor="lightgray">
+            <th>
+              <div align="center">PM Scale</div>
+            </th>
+            <th>
+              <div align="center">Health Effects</div>
+            </th>
+            <th>
+              <div align="center">Precautionary Actions</div>
+            </th>
+          </tr>
+          <tr bgcolor="mediumaquamarine">
+            <td>
+              <div align="center"><strong>Good</strong><br /><strong>0 to 49</strong></div>
+            </td>
+            <td>Little to no risk.</td>
+            <td>None.</td>
+          </tr>
+          <tr bgcolor="khaki">
+            <td>
+              <div align="center"><strong>Moderate</strong><br /><strong>50 to 99</strong></div>
+            </td>
+            <td>Unusually sensitive individuals may experience respiratory symptoms.</td>
+            <td>Unusually sensitive people should consider reducing prolonged or heavy exertion.</td>
+          </tr>
+          <tr bgcolor="sandybrown">
+            <td>
+              <div align="center"><strong>Unhealthy for Sensitive Groups</strong><br /><strong>100 to 149</strong>
+              </div>
+            </td>
+            <td>Increasing likelihood of respiratory symptoms in sensitive individuals, aggravation of heart or lung
+              disease and premature mortality in persons with cardiopulmonary disease and the elderly.</td>
+            <td>People with respiratory or heart disease, the elderly and children should limit prolonged exertion.
+            </td>
+          </tr>
+          <tr bgcolor="crimson">
+            <td>
+              <div align="center"><strong>Unhealthy</strong><br /><strong>150 to 199</strong></div>
+            </td>
+            <td>Increased aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary
+              disease and the elderly; increased respiratory effects in general population.</td>
+            <td>People with respiratory or heart disease, the elderly and children should avoid prolonged exertion;
+              everyone else should limit prolonged exertion.</td>
+          </tr>
+          <tr bgcolor="mediumpurple">
+            <td>
+              <div align="center"><strong>Very Unhealthy</strong><br /><strong>200 to 299</strong></div>
+            </td>
+            <td>Significant aggravation of heart or lung disease and premature mortality in persons with
+              cardiopulmonary disease and the elderly; significant increase in respiratory effects in general
+              population.</td>
+            <td>People with respiratory or heart disease, the elderly and children should avoid any outdoor activity;
+              everyone else should avoid prolonged exertion.</td>
+          </tr>
+          <tr bgcolor="maroon">
+            <td>
+              <div align="center"><strong>Hazardous</strong><br /><strong>300 to 500</strong></div>
+            </td>
+            <td>Serious aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary
+              disease and the elderly; serious risk of respiratory effects in general population.</td>
+            <td>Everyone should avoid any outdoor exertion; people with respiratory or heart disease, the elderly and
+              children should remain indoors.</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <div style="color:darkslategrey; width:800px">
+        <b>Air Quality General Info</b><br>
+        <a href=https://en.wikipedia.org/wiki/Air_quality_index
+          target=new>https://en.wikipedia.org/wiki/Air_quality_index</a><br>
+        <a href=https://blissair.com/what-is-pm-2-5.htm target=new>https://blissair.com/what-is-pm-2-5.htm</a><br>
+        <a href=https://aqicn.org/mask target=new>https://aqicn.org/mask/</a><br>
+        <br>
+        <b>Project Related Info</b><br>
+        <a href=https://openschoolsolutions.org/measure-particulate-matter-with-a-raspberry-pi
+          target=new>https://openschoolsolutions.org/measure-particulate-matter-with-a-raspberry-pi/</a>
+        (Project on how to build this)<br>
+        <a href=https://github.com/jimbob666/aqi target=new>https://github.com/jimbob666/aqi</a> (GitHub repro for the
+        HTML/JS/CSS/Python files)<br>
+        <a href=https://jimbob666.github.io/aqi/aqi.json target=new>https://jimbob666.github.io/aqi/aqi.json</a> |
+        <a href=https://jsoneditoronline.org/?url=https%3A%2F%2Fjimbob666.github.io%2Faqi%2Faqi.json target=new>view
+          Json via Viewer</a> (Updated file from Python file running on RPI Zero)<br>
+        <a href=https://bit.ly/2Nhz5P4 target=new>https://bit.ly/2Nhz5P4</a> (Google Doc Log)
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+  getData();
+  setInterval(getData, 60000);
+</script>
+
+
+
+</html>
