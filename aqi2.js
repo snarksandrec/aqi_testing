@@ -14,19 +14,19 @@ function updateHtml(data) {
   let aqiPm10 = calcAQIpm10(data.pm10);
 
   //update HTML
-  document.getElementById("time").innerHTML = data.time;
-  document.getElementById("aqiPm25").innerHTML = aqiPm25;
-  document.getElementById("aqiPm10").innerHTML = aqiPm10;
-  document.getElementById("pm25").innerHTML = "(PM2.5: " + data.pm25 + " µg/m³)";
-  document.getElementById("pm10").innerHTML = "(PM10: " + data.pm10 + " µg/m³)";
+  document.getElementById("o_time").innerHTML = data.time;
+  document.getElementById("o_aqiPm25").innerHTML = aqiPm25;
+  document.getElementById("o_aqiPm10").innerHTML = aqiPm10;
+  document.getElementById("o_pm25").innerHTML = "(PM2.5: " + data.pm25 + " µg/m³)";
+  document.getElementById("o_pm10").innerHTML = "(PM10: " + data.pm10 + " µg/m³)";
 
   //set colors
   colorsPm25 = getColor(aqiPm25);
   colorsPm10 = getColor(aqiPm10);
-  document.getElementById("containerPm25").style.background = colorsPm25.bg;
-  document.getElementById("containerPm25").style.color = colorsPm25.text
-  document.getElementById("containerPm10").style.background = colorsPm10.bg;
-  document.getElementById("containerPm10").style.color = colorsPm10.text
+  document.getElementById("o_containerPm25").style.background = colorsPm25.bg;
+  document.getElementById("o_containerPm25").style.color = colorsPm25.text
+  document.getElementById("o_containerPm10").style.background = colorsPm10.bg;
+  document.getElementById("o_containerPm10").style.color = colorsPm10.text
 }
 
 function getColor(aqi) {
