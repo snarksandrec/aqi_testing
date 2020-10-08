@@ -23,9 +23,9 @@
       <div class='aqi' id="aqiPm10"></div>
       <div class='pm-label' id="pm10"></div>
     </div>
-    <div class='aqi-outside'><iframe height="230"
-        src="https://widget.airnow.gov/aq-dial-widget/?city=Reseda&state=CA&country=USA"
-        style="border: none; border-radius: 10px;" width="230"></iframe>
+    <!--<div id="city-aqi-container"></div>-->
+    <div class='aqi-outside'>
+      <iframe height="240px" src="https://widget.airnow.gov/aq-dial-widget/?city=Reseda&state=CA&country=USA&transparent=true" style="border: none; border-radius: 10px;"></iframe>
     </div>
     <div class='quotes'>
       <marquee behavior="scroll" direction="up" scrollamount=2>
@@ -63,6 +63,12 @@
           <br><span class='quote-source'>botched</span>
         </p>
         <p>oh, it doesn't have good potato. uh ... tomato.
+          <br><span class='quote-source'>michelle</span>
+        </p>
+        <p>(to the tune of 'another brick in the wall')<br>two confusing / packashages             
+          <br><span class='quote-source'>erin</span>
+        </p>
+        <p><i>packashagées</i> is the feminine form of the word            
           <br><span class='quote-source'>michelle</span>
         </p>
         <!--<p>quote             
@@ -108,7 +114,7 @@
             <td>People with respiratory or heart disease, the elderly and children should limit prolonged exertion.
             </td>
           </tr>
-          <tr bgcolor="crimson">
+          <tr bgcolor="tomato">
             <td>
               <div align="center"><strong>Unhealthy</strong><br /><strong>150 to 199</strong></div>
             </td>
@@ -117,7 +123,7 @@
             <td>People with respiratory or heart disease, the elderly and children should avoid prolonged exertion;
               everyone else should limit prolonged exertion.</td>
           </tr>
-          <tr bgcolor="mediumpurple">
+          <tr bgcolor="crimson">
             <td>
               <div align="center"><strong>Very Unhealthy</strong><br /><strong>200 to 299</strong></div>
             </td>
@@ -127,7 +133,7 @@
             <td>People with respiratory or heart disease, the elderly and children should avoid any outdoor activity;
               everyone else should avoid prolonged exertion.</td>
           </tr>
-          <tr bgcolor="maroon">
+          <tr bgcolor="firebrick">
             <td>
               <div align="center"><strong>Hazardous</strong><br /><strong>300 to 500</strong></div>
             </td>
@@ -166,6 +172,24 @@
   setInterval(getData, 60000);
 </script>
 
+<!-- AQI WIDGET -->
+<script type="text/javascript" charset="utf-8">
+  (function (w, d, t, f) {
+    w[f] = w[f] || function (c, k, n) {
+      s = w[f], k = s['k'] = (s['k'] || (k ? ('&k=' + k) : '')); s['c'] =
+        c = (c instanceof Array) ? c : [c]; s['n'] = n = n || 0; L = d.createElement(t), e = d.getElementsByTagName(t)[0];
+      L.async = 1; L.src = '//feed.aqicn.org/feed/' + (c[n].city) + '/' + (c[n].lang || '') + '/feed.v1.js?n=' + n + k;
+      e.parentNode.insertBefore(L, e);
+    };
+  })(window, document, 'script', '_aqiFeed');    
+</script>
 
+<script type="text/javascript" charset="utf-8">
+  _aqiFeed({
+    display: "<div style='%style;max-width:200px;text-align:center;border-radius: 10px;float: left;margin: 10px;padding: 20px;'>%time<br><div style='font-size:100px;height:105px;margin-top:-30px;padding-bottom:30px;'>%aqiv</div>",
+    container: "city-aqi-container",
+    city: "losangeles/reseda"
+  });  
+</script>
 
 </html>

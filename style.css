@@ -1,0 +1,87 @@
+.container {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.aqi-container {
+    border-radius: 10px;
+    width: 180px;
+    float: left;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'News Cycle', sans-serif;
+}
+
+.aqi-outside {
+    width: 180px;
+    float: left;
+    margin: -20px;
+    margin-left: 10px;
+}
+
+.time {
+    text-align: center;
+    font-family: 'News Cycle', sans-serif;
+    font-size: 30px;
+    margin: 0px;
+    margin-left: -60px;
+    color: lightsteelblue;
+}
+
+.aqi-label{
+    color: darkslategray;
+}
+
+.aqi {
+    font-size: 100px;
+    margin: -40px;
+    font-weight: bold;
+    font-family: 'News Cycle', sans-serif;
+    color: white;
+}
+
+.pm-label {
+    font-style: italic;
+    font-family: 'News Cycle', sans-serif;
+    color: darkslategray;
+    margin-top: 15px;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'News Cycle', sans-serif;
+}
+
+.quotes {
+    color: white;
+    font-size: 50px;
+    line-height: 50px;
+    width: 650px;
+    float: left;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.quote-source{
+    font-style: italic;
+    font-size: 30px;
+    color: lightsteelblue;
+}
+
+.chart {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    width: 600px;
+    float: left;
+    margin-left: -250px;
+    text-align: left;
+    padding: 10px;
+    text-align: left;
+}
