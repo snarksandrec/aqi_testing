@@ -32,22 +32,22 @@ function updateHtml(data) {
 function getColor(aqi) {
   switch (true) {
     case (aqi >= 50 && aqi < 100):
-      color = "yellow";
+      color = "khaki"; //yellow
       break;
     case (aqi >= 100 && aqi < 150):
-      color = "orange";
+      color = "sandybrown"; //orange
       break;
     case (aqi >= 150 && aqi < 200):
-      color = "red";
+      color = "tomato"; //red
       break;
     case (aqi >= 200 && aqi < 300):
-      color = "purple";
+      color = "crimson"; //purple
       break;
     case (aqi >= 300):
-      color = "brown";
+      color = "firebrick"; //brown
       break;
     default:
-      color = "Lime";
+      color = "mediumaquamarine"; //green
   }
   return {bg: color, text: (aqi > 200) ? "white" : "black"};
 }
