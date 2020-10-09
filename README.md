@@ -3,9 +3,9 @@
 
 
 ## 2. Copy these files to /home/pi
-`aqi.py`
-`config.py`
-`google-secret.json`
+- `aqi.py`
+- `config.py`
+- `google-secret.json`
 
 
 ## 3. If you're adding a new device, update these lines in aqi.py
@@ -14,10 +14,10 @@
 
 
 ## 4. Run each of the below
-`chmod +x aqi.py`
-`pip install pygithub`
-`pip install gspread`
-`pip install oauth2client`
+- `chmod +x aqi.py`
+- `pip install pygithub`
+- `pip install gspread`
+- `pip install oauth2client`
 
 
 
