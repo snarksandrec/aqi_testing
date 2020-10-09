@@ -1,19 +1,19 @@
-# 1. Run
+## 1. Run
 `sudo apt install git-core python-serial python-enum lighttpd`
 
 
-# 2. Copy these files to /home/pi
+## 2. Copy these files to /home/pi
 `aqi.py`
 `config.py`
 `google-secret.json`
 
 
-# 3. If you're adding a new device, update these lines in aqi.py
+## 3. If you're adding a new device, update these lines in aqi.py
 > NOTE: the Google doc will add data from this device to the tab # that matches the device ID. Example: AQI2 data will go to the 2nd tab
 *line 36: update device ID*
 
 
-# 4. Run each of the below
+## 4. Run each of the below
 `chmod +x aqi.py`
 `pip install pygithub`
 `pip install gspread`
@@ -21,7 +21,7 @@
 
 
 
-# 5. Edit the crontab
+## 5. Edit the crontab
 `crontab -e`
 ```
 # Run on start up once
@@ -31,10 +31,10 @@
 ```
 
 
-# 6. Create empty .json file on ram disk
+## 6. Create empty .json file on ram disk
 `sudo nano /etc/fstab`
-5a. Add the below text:
+### 5a. Add the below text:
 `tmpfs /tmp tmpfs defaults,noatime,nosuid,size=4m 0 0`
 
 
-# 7. Reboot
+## 7. Reboot
