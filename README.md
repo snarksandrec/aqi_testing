@@ -10,6 +10,7 @@
 
 ## 3. If you're adding a new device, update these lines in aqi.py
 > NOTE: the Google doc will add data from this device to the tab # that matches the device ID. Example: AQI2 data will go to the 2nd tab
+
 *line 36: update device ID*
 
 
@@ -18,7 +19,6 @@
 - `pip install pygithub`
 - `pip install gspread`
 - `pip install oauth2client`
-
 
 
 ## 5. Edit the crontab
@@ -33,6 +33,7 @@
 
 ## 6. Create empty .json file on ram disk
 `sudo nano /etc/fstab`
+
 ### 5a. Add the below text:
 `tmpfs /tmp tmpfs defaults,noatime,nosuid,size=4m 0 0`
 
