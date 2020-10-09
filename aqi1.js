@@ -1,4 +1,4 @@
-function getData() {
+function aqi1.getData() {
   fetch("aqi1.json").then(response => {
     response.json().then(data => {
       //console.log(data);
