@@ -2,190 +2,176 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AQI</title>
-  <script src="aqi2.js"></script>
-  <link rel='stylesheet' href='style.css'>
-  <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AQI</title>
+    <script src="aqi1.js"></script>
+    <script src="aqi2.js"></script>
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body style="background-color: coral;">
-  <div class="container">
-    <div class='time' id="o_time"></div>
-    <div class='aqi-container' id="o_containerPm25">
-      <div class='aqi-label'>Outdoor AQI (PM2.5)</div>
-      <div class='aqi' id="o_aqiPm25"></div>
-      <div class='pm-label' id="o_pm25"></div>
-    </div>
-    <div class='aqi-container' id="o_containerPm10">
-      <div class='aqi-label'>Outdoor AQI (PM10)</div>
-      <div class='aqi' id="o_aqiPm10"></div>
-      <div class='pm-label' id="o_pm10"></div>
-    </div>
-    <div class='quotes'>
-      <marquee behavior="scroll" direction="up" scrollamount=2>
-        <p>she's really getting under my nerves!
-          <br><span class='quote-source'>the challenge</span>
-        </p>
-        <p>my butthole is in my throat!
-          <br><span class='quote-source'>teenage bounty hunters</span>
-        </p>
-        <p>natey, did you lock the eggs??
-          <br><span class='quote-source'>erin</span>
-        </p>
-        <p>underneath of it
-          <br><span class='quote-source'>cold case files</span>
-        </p>
-        <p>puttin' here there
-          <br><span class='quote-source'>cold case files</span>
-        </p>
-        <p>why does she get away scotch-free?
-          <br><span class='quote-source'>selling sunset</span>
-        </p>
-        <p>she was shitting and throwing her brains out
-          <br><span class='quote-source'>selling sunset</span>
-        </p>
-        <p>in and out of itself
-          <br><span class='quote-source'>selling sunset</span>
-        </p>
-        <p>lubilo's baga grill
-          <br><span class='quote-source'>michelle</span>
-        </p>
-        <p>i'm not gonna throw this axe away so we better jazz it!
-          <br><span class='quote-source'>buzfeed unsolved: true crime</span>
-        </p>
-        <p>our doctor is unfortunately deceased. he was ran over god bless him.
-          <br><span class='quote-source'>botched</span>
-        </p>
-        <p>oh, it doesn't have good potato. uh ... tomato.
-          <br><span class='quote-source'>michelle</span>
-        </p>
-        <p>(to the tune of 'another brick in the wall')<br>two confusing / packashages             
-          <br><span class='quote-source'>erin</span>
-        </p>
-        <p><i>packashagées</i> is the feminine form of the word            
-          <br><span class='quote-source'>michelle</span>
-        </p>
-        <!--<p>quote             
-            <br><span class='quote-source'>source</span>
-          </p>-->
-      </marquee>
+    <div class="container">
+        <div class='time' id="i_time"></div>
+        <!--INDOOR-->
+        <div class='aqi-container' id="i_containerPm25">
+            <div class='aqi-label'>Indoor AQI (PM2.5)</div>
+            <div class='aqi' id="i_aqiPm25"></div>
+            <div class='pm-label' id="i_pm25"></div>
+        </div>
+        <div class='aqi-container' id="i_containerPm10">
+            <div class='aqi-label'>Indoor AQI (PM10)</div>
+            <div class='aqi' id="i_aqiPm10"></div>
+            <div class='pm-label' id="i_pm10"></div>
+        </div>
+        <!--OUTDOOR-->
+        <div class='aqi-container' id="o_containerPm25">
+            <div class='aqi-label'>Outdoor AQI (PM2.5)</div>
+            <div class='aqi' id="o_aqiPm25"></div>
+            <div class='pm-label' id="o_pm25"></div>
+        </div>
+        <div class='aqi-container' id="o_containerPm10">
+            <div class='aqi-label'>Outdoor AQI (PM10)</div>
+            <div class='aqi' id="o_aqiPm10"></div>
+            <div class='pm-label' id="o_pm10"></div>
+        </div>
     </div>
     <div class="chart">
-      <table border="0" width="200%" cellspacing="2" cellpadding="5">
-        <tbody>
-          <tr bgcolor="lightgray">
-            <th>
-              <div align="center">PM Scale</div>
-            </th>
-            <th>
-              <div align="center">Health Effects</div>
-            </th>
-            <th>
-              <div align="center">Precautionary Actions</div>
-            </th>
-          </tr>
-          <tr bgcolor="mediumaquamarine"> <!--green-->
-            <td>
-              <div align="center"><strong>Good</strong><br /><strong>0 to 49</strong></div>
-            </td>
-            <td>Little to no risk.</td>
-            <td>None.</td>
-          </tr>
-          <tr bgcolor="khaki"> <!--yellow-->
-            <td>
-              <div align="center"><strong>Moderate</strong><br /><strong>50 to 99</strong></div>
-            </td>
-            <td>Unusually sensitive individuals may experience respiratory symptoms.</td>
-            <td>Unusually sensitive people should consider reducing prolonged or heavy exertion.</td>
-          </tr>
-          <tr bgcolor="sandybrown"> <!--orange-->
-            <td>
-              <div align="center"><strong>Unhealthy for Sensitive Groups</strong><br /><strong>100 to 149</strong>
-              </div>
-            </td>
-            <td>Increasing likelihood of respiratory symptoms in sensitive individuals, aggravation of heart or lung
-              disease and premature mortality in persons with cardiopulmonary disease and the elderly.</td>
-            <td>People with respiratory or heart disease, the elderly and children should limit prolonged exertion.
-            </td>
-          </tr>
-          <tr bgcolor="tomato"> <!--red-->
-            <td>
-              <div align="center"><strong>Unhealthy</strong><br /><strong>150 to 199</strong></div>
-            </td>
-            <td>Increased aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary
-              disease and the elderly; increased respiratory effects in general population.</td>
-            <td>People with respiratory or heart disease, the elderly and children should avoid prolonged exertion;
-              everyone else should limit prolonged exertion.</td>
-          </tr>
-          <tr bgcolor="crimson"> <!--purple-->
-            <td>
-              <div align="center"><strong>Very Unhealthy</strong><br /><strong>200 to 299</strong></div>
-            </td>
-            <td>Significant aggravation of heart or lung disease and premature mortality in persons with
-              cardiopulmonary disease and the elderly; significant increase in respiratory effects in general
-              population.</td>
-            <td>People with respiratory or heart disease, the elderly and children should avoid any outdoor activity;
-              everyone else should avoid prolonged exertion.</td>
-          </tr>
-          <tr bgcolor="firebrick"> <!--brown-->
-            <td>
-              <div align="center"><strong>Hazardous</strong><br /><strong>300 to 500</strong></div>
-            </td>
-            <td>Serious aggravation of heart or lung disease and premature mortality in persons with cardiopulmonary
-              disease and the elderly; serious risk of respiratory effects in general population.</td>
-            <td>Everyone should avoid any outdoor exertion; people with respiratory or heart disease, the elderly and
-              children should remain indoors.</td>
-          </tr>
-        </tbody>
-      </table>
-      <br>
-      <div style="color:darkslategrey; width:800px">
-        <b>Air Quality General Info</b><br>
-        <a href=https://en.wikipedia.org/wiki/Air_quality_index
-          target=new>https://en.wikipedia.org/wiki/Air_quality_index</a><br>
-        <a href=https://blissair.com/what-is-pm-2-5.htm target=new>https://blissair.com/what-is-pm-2-5.htm</a><br>
-        <a href=https://aqicn.org/mask target=new>https://aqicn.org/mask/</a><br>
+        <table border="0" width="200%" cellspacing="2" cellpadding="5">
+            <tbody>
+                <tr bgcolor="lightgray">
+                    <th>
+                        <div align="center">PM Scale</div>
+                    </th>
+                    <th>
+                        <div align="center">Health Effects</div>
+                    </th>
+                    <th>
+                        <div align="center">Precautionary Actions</div>
+                    </th>
+                </tr>
+                <tr bgcolor="mediumaquamarine">
+                    <!--green-->
+                    <td>
+                        <div align="center"><strong>Good</strong><br /><strong>0 to 49</strong></div>
+                    </td>
+                    <td>Little to no risk.</td>
+                    <td>None.</td>
+                </tr>
+                <tr bgcolor="khaki">
+                    <!--yellow-->
+                    <td>
+                        <div align="center"><strong>Moderate</strong><br /><strong>50 to 99</strong></div>
+                    </td>
+                    <td>Unusually sensitive individuals may experience respiratory symptoms.</td>
+                    <td>Unusually sensitive people should consider reducing prolonged or heavy exertion.</td>
+                </tr>
+                <tr bgcolor="sandybrown">
+                    <!--orange-->
+                    <td>
+                        <div align="center"><strong>Unhealthy for Sensitive Groups</strong><br /><strong>100 to
+                                149</strong>
+                        </div>
+                    </td>
+                    <td>Increasing likelihood of respiratory symptoms in sensitive individuals, aggravation of heart or
+                        lung
+                        disease and premature mortality in persons with cardiopulmonary disease and the elderly.</td>
+                    <td>People with respiratory or heart disease, the elderly and children should limit prolonged
+                        exertion.
+                    </td>
+                </tr>
+                <tr bgcolor="tomato">
+                    <!--red-->
+                    <td>
+                        <div align="center"><strong>Unhealthy</strong><br /><strong>150 to 199</strong></div>
+                    </td>
+                    <td>Increased aggravation of heart or lung disease and premature mortality in persons with
+                        cardiopulmonary
+                        disease and the elderly; increased respiratory effects in general population.</td>
+                    <td>People with respiratory or heart disease, the elderly and children should avoid prolonged
+                        exertion;
+                        everyone else should limit prolonged exertion.</td>
+                </tr>
+                <tr bgcolor="crimson">
+                    <!--purple-->
+                    <td>
+                        <div align="center"><strong>Very Unhealthy</strong><br /><strong>200 to 299</strong></div>
+                    </td>
+                    <td>Significant aggravation of heart or lung disease and premature mortality in persons with
+                        cardiopulmonary disease and the elderly; significant increase in respiratory effects in general
+                        population.</td>
+                    <td>People with respiratory or heart disease, the elderly and children should avoid any outdoor
+                        activity;
+                        everyone else should avoid prolonged exertion.</td>
+                </tr>
+                <tr bgcolor="firebrick">
+                    <!--brown-->
+                    <td>
+                        <div align="center"><strong>Hazardous</strong><br /><strong>300 to 500</strong></div>
+                    </td>
+                    <td>Serious aggravation of heart or lung disease and premature mortality in persons with
+                        cardiopulmonary
+                        disease and the elderly; serious risk of respiratory effects in general population.</td>
+                    <td>Everyone should avoid any outdoor exertion; people with respiratory or heart disease, the
+                        elderly and
+                        children should remain indoors.</td>
+                </tr>
+            </tbody>
+        </table>
         <br>
-        <b>Project Related Info</b><br>
-        <a href=https://openschoolsolutions.org/measure-particulate-matter-with-a-raspberry-pi
-          target=new>https://openschoolsolutions.org/measure-particulate-matter-with-a-raspberry-pi/</a>
-        (Project on how to build this)<br>
-        <a href=https://github.com/jimbob666/aqi target=new>https://github.com/jimbob666/aqi</a> (GitHub repro for the
-        HTML/JS/CSS/Python files)<br>
-        <a href=https://jimbob666.github.io/aqi/aqi.json target=new>https://jimbob666.github.io/aqi/aqi.json</a> |
-        <a href=https://jsoneditoronline.org/?url=https%3A%2F%2Fjimbob666.github.io%2Faqi%2Faqi.json target=new>view
-          Json via Viewer</a> (Updated file from Python file running on RPI Zero)<br>
-        <a href=https://bit.ly/2Nhz5P4 target=new>https://bit.ly/2Nhz5P4</a> (Google Doc Log)
-      </div>
+        <div style="color:darkslategrey; width:800px">
+            <b>Air Quality General Info</b><br>
+            <a href=https://en.wikipedia.org/wiki/Air_quality_index>Air Quality Index (Wiki)</a><br>
+            <a href=https://www.iqair.com/us/world-air-quality-ranking>World Most Polluted Cities</a> (Live) | <a
+                href=https://www.iqair.com/us/world-most-polluted-cities?page=1&perPage=50&cities=x>World Most Polluted
+                Cities</a> (2019)<br>
+            <a href=https://air.plumelabs.com/air-quality-in-los-angeles-ca-mwyt>Plume AQI Map - Los Angeles</a> | <a
+                href=https://air.plumelabs.com/en />World Map</a> (Scroll down page)<br>
+            <a href=https://www.airnow.gov/?city=Pasadena&state=CA&country=USA>Air Now Site</a> | <a
+                href=https://fire.airnow.gov>Air Now + Fire Data</a> | <a href=https://www2.purpleair.com>Purple
+                Air</a><br>
+            <a href=https://www.fire.ca.gov/incidents />Active CalFire Incidents</a><br>
+            <br>
+            <b>Project Related Info</b><br>
+            <a href=https://openschoolsolutions.org/measure-particulate-matter-with-a-raspberry-pi
+                target=new>https://openschoolsolutions.org/measure-particulate-matter-with-a-raspberry-pi/</a>
+            (Project on how to build this)<br>
+            <a href=https://github.com/snarksandrec/aqi target=new>https://github.com/snarksandrec/aqi</a> (GitHub repro for
+            the
+            HTML/JS/CSS/Python files)<br>
+            <a href=https://snarksandrec.github.io/aqi/aqi.json target=new>https://snarksandrec.github.io/aqi/aqi.json</a> |
+            <a href=https://jsoneditoronline.org/?url=https%3A%2F%2Fjimbob666.github.io%2Faqi%2Faqi.json target=new>view
+                Json via Viewer</a> (Updated file from Python file running on RPI Zero)<br>
+            <a href=https://bit.ly/2Nhz5P4 target=new>https://bit.ly/2Nhz5P4</a> (Google Doc Log)
+        </div>
     </div>
-  </div>
+    </div>
 </body>
 
 <script type="text/javascript">
-  getData();
-  setInterval(getData, 60000);
+    getData();
+    setInterval(getData, 60000);
 </script>
 
 <!-- AQI WIDGET -->
 <script type="text/javascript" charset="utf-8">
-  (function (w, d, t, f) {
-    w[f] = w[f] || function (c, k, n) {
-      s = w[f], k = s['k'] = (s['k'] || (k ? ('&k=' + k) : '')); s['c'] =
-        c = (c instanceof Array) ? c : [c]; s['n'] = n = n || 0; L = d.createElement(t), e = d.getElementsByTagName(t)[0];
-      L.async = 1; L.src = '//feed.aqicn.org/feed/' + (c[n].city) + '/' + (c[n].lang || '') + '/feed.v1.js?n=' + n + k;
-      e.parentNode.insertBefore(L, e);
-    };
-  })(window, document, 'script', '_aqiFeed');    
+    (function (w, d, t, f) {
+        w[f] = w[f] || function (c, k, n) {
+            s = w[f], k = s['k'] = (s['k'] || (k ? ('&k=' + k) : '')); s['c'] =
+                c = (c instanceof Array) ? c : [c]; s['n'] = n = n || 0; L = d.createElement(t), e = d.getElementsByTagName(t)[0];
+            L.async = 1; L.src = '//feed.aqicn.org/feed/' + (c[n].city) + '/' + (c[n].lang || '') + '/feed.v1.js?n=' + n + k;
+            e.parentNode.insertBefore(L, e);
+        };
+    })(window, document, 'script', '_aqiFeed');    
 </script>
 
 <script type="text/javascript" charset="utf-8">
-  _aqiFeed({
-    display: "<div style='%style;max-width:200px;text-align:center;border-radius: 10px;float: left;margin: 10px;padding: 20px;'>%time<br><div style='font-size:100px;height:105px;margin-top:-30px;padding-bottom:30px;'>%aqiv</div>",
-    container: "city-aqi-container",
-    city: "losangeles/reseda"
-  });  
+    _aqiFeed({
+        display: "<div style='%style;max-width:200px;text-align:center;border-radius: 10px;float: left;margin: 10px;padding: 20px;'>%time<br><div style='font-size:100px;height:105px;margin-top:-30px;padding-bottom:30px;'>%aqiv</div>",
+        container: "city-aqi-container",
+        city: "losangeles/reseda"
+    });  
 </script>
 
 </html>
