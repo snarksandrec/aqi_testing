@@ -14,7 +14,7 @@
     font-family: 'News Cycle', sans-serif;
     margin-left: auto;
     margin-right: auto;
-    /*max-width: 460px;*/
+    max-width: 400px;
 }
 
 /*.aqi-container {
@@ -99,5 +99,5 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     text-align: left;
-    /*width: 600px;*/
+    max-width: 600px;
 }
