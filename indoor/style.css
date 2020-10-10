@@ -16,12 +16,12 @@
 }
 
 .time {
-    text-align: center;
+    color: lightsteelblue;
     font-family: 'News Cycle', sans-serif;
     font-size: 30px;
     margin: 0px;
     margin-left: -60px;
-    color: lightsteelblue;
+    text-align: center;
 }
 
 .aqi-label {
@@ -29,40 +29,23 @@
 }
 
 .aqi {
+    color: white;
     font-size: 100px;
-    margin: -40px;
     font-weight: bold;
     font-family: 'News Cycle', sans-serif;
-    color: white;
+    margin: -40px;
 }
 
 .pm-label {
-    font-style: italic;
-    font-family: 'News Cycle', sans-serif;
     color: darkslategray;
+    font-family: 'News Cycle', sans-serif;
+    font-style: italic;
     margin-top: 15px;
 }
 
 h2 {
-    text-align: center;
     font-family: 'News Cycle', sans-serif;
-}
-
-.quotes {
-    color: white;
-    font-size: 50px;
-    line-height: 50px;
-    width: 650px;
-    float: left;
-    margin: 10px;
     text-align: center;
-    padding: 10px;
-}
-
-.quote-source {
-    font-style: italic;
-    font-size: 30px;
-    color: lightsteelblue;
 }
 
 .chart {
@@ -71,8 +54,6 @@ h2 {
     font-family: 'News Cycle', sans-serif;
     font-size: 20px;
     line-height: 30px;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
     text-align: left;
     max-width: 600px;
 }
