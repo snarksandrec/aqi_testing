@@ -15,8 +15,8 @@ function updateHtml(data) {
 
   //update HTML
   document.getElementById("time").innerHTML = data.time;
-  document.getElementById("aqiPm25").innerHTML = o_aqiPm25;
-  document.getElementById("aqiPm10").innerHTML = o_aqiPm10;
+  document.getElementById("aqiPm25").innerHTML = aqiPm25;
+  document.getElementById("aqiPm10").innerHTML = aqiPm10;
   document.getElementById("pm25").innerHTML = "(PM2.5: " + data.pm25 + " µg/m³)";
   document.getElementById("pm10").innerHTML = "(PM10: " + data.pm10 + " µg/m³)";
 
