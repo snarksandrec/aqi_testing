@@ -10,6 +10,8 @@
 }*/
 
 .container {
+    background-color: pink;
+    font-family: 'News Cycle', sans-serif;
     margin-left: auto;
     margin-right: auto;
     max-width: 460px;
@@ -29,13 +31,13 @@
 }*/
 
 .aqi-container {
-    border: 3px solid;
     border-radius: 10px;
-    width: 180px;
     float: left;
+    font-family: 'News Cycle', sans-serif;
     margin: 10px;
-    text-align: center;
     padding: 10px;
+    text-align: center;
+    width: 180px;
 }
 
 .time {
@@ -94,9 +96,8 @@ h2 {
     font-family: 'News Cycle', sans-serif;
     font-size: 20px;
     line-height: 30px;
-    width: 600px;
-    /*float: left;*/
-    /*margin-left: -250px;*/
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
-    /*padding: 10px;*/
+    width: 600px;
 }
