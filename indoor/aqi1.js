@@ -10,23 +10,23 @@ function getData() {
 }
 
 function updateHtml(data) {
-  let i_aqiPm25 = calcaqiPm25(data.pm25);
-  let i_aqiPm10 = calcaqiPm10(data.pm10);
+  let aqiPm25 = calcaqiPm25(data.pm25);
+  let aqiPm10 = calcaqiPm10(data.pm10);
 
   //update HTML
-  document.getElementById("i_time").innerHTML = data.time;
-  document.getElementById("i_aqiPm25").innerHTML = i_aqiPm25;
-  document.getElementById("i_aqiPm10").innerHTML = i_aqiPm10;
-  document.getElementById("i_pm25").innerHTML = "(PM2.5: " + data.pm25 + " µg/m³)";
-  document.getElementById("i_pm10").innerHTML = "(PM10: " + data.pm10 + " µg/m³)";
+  document.getElementById("time").innerHTML = data.time;
+  document.getElementById("aqiPm25").innerHTML = aqiPm25;
+  document.getElementById("aqiPm10").innerHTML = aqiPm10;
+  document.getElementById("pm25").innerHTML = "(PM2.5: " + data.pm25 + " µg/m³)";
+  document.getElementById("pm10").innerHTML = "(PM10: " + data.pm10 + " µg/m³)";
 
   //set colors
-  colorsPm25 = getColor(i_aqiPm25);
-  colorsPm10 = getColor(i_aqiPm10);
-  document.getElementById("i_containerPm25").style.background = colorsPm25.bg;
-  document.getElementById("i_containerPm25").style.color = colorsPm25.text
-  document.getElementById("i_containerPm10").style.background = colorsPm10.bg;
-  document.getElementById("i_containerPm10").style.color = colorsPm10.text
+  colorsPm25 = getColor(aqiPm25);
+  colorsPm10 = getColor(aqiPm10);
+  document.getElementById("containerPm25").style.background = colorsPm25.bg;
+  document.getElementById("containerPm25").style.color = colorsPm25.text
+  document.getElementById("containerPm10").style.background = colorsPm10.bg;
+  document.getElementById("containerPm10").style.color = colorsPm10.text
 }
 
 function getColor(aqi) {
@@ -71,24 +71,24 @@ function calcaqiPm25(pm25) {
 	let aqi7 = 400;
 	let aqi8 = 500;
 
-	let i_aqiPm25 = 0;
+	let aqiPm25 = 0;
 
 	if (pm25 >= pm1 && pm25 <= pm2) {
-		i_aqiPm25 = ((aqi2 - aqi1) / (pm2 - pm1)) * (pm25 - pm1) + aqi1;
+		aqiPm25 = ((aqi2 - aqi1) / (pm2 - pm1)) * (pm25 - pm1) + aqi1;
 	} else if (pm25 >= pm2 && pm25 <= pm3) {
-		i_aqiPm25 = ((aqi3 - aqi2) / (pm3 - pm2)) * (pm25 - pm2) + aqi2;
+		aqiPm25 = ((aqi3 - aqi2) / (pm3 - pm2)) * (pm25 - pm2) + aqi2;
 	} else if (pm25 >= pm3 && pm25 <= pm4) {
-		i_aqiPm25 = ((aqi4 - aqi3) / (pm4 - pm3)) * (pm25 - pm3) + aqi3;
+		aqiPm25 = ((aqi4 - aqi3) / (pm4 - pm3)) * (pm25 - pm3) + aqi3;
 	} else if (pm25 >= pm4 && pm25 <= pm5) {
-		i_aqiPm25 = ((aqi5 - aqi4) / (pm5 - pm4)) * (pm25 - pm4) + aqi4;
+		aqiPm25 = ((aqi5 - aqi4) / (pm5 - pm4)) * (pm25 - pm4) + aqi4;
 	} else if (pm25 >= pm5 && pm25 <= pm6) {
-		i_aqiPm25 = ((aqi6 - aqi5) / (pm6 - pm5)) * (pm25 - pm5) + aqi5;
+		aqiPm25 = ((aqi6 - aqi5) / (pm6 - pm5)) * (pm25 - pm5) + aqi5;
 	} else if (pm25 >= pm6 && pm25 <= pm7) {
-		i_aqiPm25 = ((aqi7 - aqi6) / (pm7 - pm6)) * (pm25 - pm6) + aqi6;
+		aqiPm25 = ((aqi7 - aqi6) / (pm7 - pm6)) * (pm25 - pm6) + aqi6;
 	} else if (pm25 >= pm7 && pm25 <= pm8) {
-		i_aqiPm25 = ((aqi8 - aqi7) / (pm8 - pm7)) * (pm25 - pm7) + aqi7;
+		aqiPm25 = ((aqi8 - aqi7) / (pm8 - pm7)) * (pm25 - pm7) + aqi7;
 	}
-	return i_aqiPm25.toFixed(0);
+	return aqiPm25.toFixed(0);
 }
 
 function calcaqiPm10(pm10) {
@@ -110,22 +110,22 @@ function calcaqiPm10(pm10) {
 	let aqi7 = 400;
 	let aqi8 = 500;
 
-	let i_aqiPm10 = 0;
+	let aqiPm10 = 0;
 
 	if (pm10 >= pm1 && pm10 <= pm2) {
-		i_aqiPm10 = ((aqi2 - aqi1) / (pm2 - pm1)) * (pm10 - pm1) + aqi1;
+		aqiPm10 = ((aqi2 - aqi1) / (pm2 - pm1)) * (pm10 - pm1) + aqi1;
 	} else if (pm10 >= pm2 && pm10 <= pm3) {
-		i_aqiPm10 = ((aqi3 - aqi2) / (pm3 - pm2)) * (pm10 - pm2) + aqi2;
+		aqiPm10 = ((aqi3 - aqi2) / (pm3 - pm2)) * (pm10 - pm2) + aqi2;
 	} else if (pm10 >= pm3 && pm10 <= pm4) {
-		i_aqiPm10 = ((aqi4 - aqi3) / (pm4 - pm3)) * (pm10 - pm3) + aqi3;
+		aqiPm10 = ((aqi4 - aqi3) / (pm4 - pm3)) * (pm10 - pm3) + aqi3;
 	} else if (pm10 >= pm4 && pm10 <= pm5) {
-		i_aqiPm10 = ((aqi5 - aqi4) / (pm5 - pm4)) * (pm10 - pm4) + aqi4;
+		aqiPm10 = ((aqi5 - aqi4) / (pm5 - pm4)) * (pm10 - pm4) + aqi4;
 	} else if (pm10 >= pm5 && pm10 <= pm6) {
-		i_aqiPm10 = ((aqi6 - aqi5) / (pm6 - pm5)) * (pm10 - pm5) + aqi5;
+		aqiPm10 = ((aqi6 - aqi5) / (pm6 - pm5)) * (pm10 - pm5) + aqi5;
 	} else if (pm10 >= pm6 && pm10 <= pm7) {
-		i_aqiPm10 = ((aqi7 - aqi6) / (pm7 - pm6)) * (pm10 - pm6) + aqi6;
+		aqiPm10 = ((aqi7 - aqi6) / (pm7 - pm6)) * (pm10 - pm6) + aqi6;
 	} else if (pm10 >= pm7 && pm10 <= pm8) {
-		i_aqiPm10 = ((aqi8 - aqi7) / (pm8 - pm7)) * (pm10 - pm7) + aqi7;
+		aqiPm10 = ((aqi8 - aqi7) / (pm8 - pm7)) * (pm10 - pm7) + aqi7;
 	}
-	return i_aqiPm10.toFixed(0);
+	return aqiPm10.toFixed(0);
 }
