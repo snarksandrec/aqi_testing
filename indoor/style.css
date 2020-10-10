@@ -81,9 +81,8 @@ h2 {
     font-size: 20px;
     line-height: 30px;
     width: 600px;
-    float: left;
-    margin-left: -250px;
+    /*float: left;
+    margin-left: -250px;*/
     text-align: left;
-    padding: 10px;
-    text-align: left;
+    /*padding: 10px;*/
 }
