@@ -11,19 +11,19 @@
 .aqi-container {
     border-radius: 10px;
     width: 180px;
-    float: left;
+    /*float: left;*/
     margin: 10px;
     text-align: center;
     padding: 10px;
     font-family: 'News Cycle', sans-serif;
 }
 
-.aqi-outside {
+/*.aqi-outside {
     width: 180px;
     float: left;
     margin: -20px;
     margin-left: 10px;
-}
+}*/
 
 .time {
     text-align: center;
