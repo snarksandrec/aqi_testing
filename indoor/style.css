@@ -5,14 +5,15 @@
     margin-right: auto;
     /*max-width: 100px;*/
     font-family: 'News Cycle', sans-serif;
-    background-color: aquamarine;
+    background-color: pink;
 }
 
 .aqi-container {
     border-radius: 10px;
+    display: inline-block;
     width: 180px;
     /*float: left;*/
-    margin: 10px;
+    margin: auto;
     text-align: center;
     padding: 10px;
     font-family: 'News Cycle', sans-serif;
