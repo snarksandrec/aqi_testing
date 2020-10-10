@@ -1,12 +1,12 @@
 .container {
-    background-color: pink;
+    background-color: whitesmoke;
     display: block;
     font-family: 'News Cycle', sans-serif;
     margin-left: auto;
     margin-right: auto;
     max-width: 500px;
     overflow: auto;
-    position: relative;
+    position: absolute;
 }
 
 .aqi-container {
@@ -17,6 +17,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 5%;
+    position: realtive;
     text-align: center;    
     width: 180px;
 }
