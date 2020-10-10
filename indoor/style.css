@@ -68,7 +68,7 @@ h2 {
 
 .chart {
     color: white;
-    display: block;
+    display: table;
     font-family: 'News Cycle', sans-serif;
     font-size: 20px;
     line-height: 30px;
