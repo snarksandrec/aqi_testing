@@ -4,41 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AQI</title>
+    <title>Indoor AQI</title>
     <script src="aqi1.js"></script>
-    <!--<script src="aqi2.js"></script>-->
     <link rel='stylesheet' href='style.css'>
     <link href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body style="background-color: coral;">
+<body style="background-color: lightpink;">
     <div class="container">
-        <div class='time' id="i_time"></div>
-        <!--INDOOR-->
-        <div class='aqi-container' id="i_containerPm25">
+        <div class='time' id="time"></div>
+        <div class='aqi-container' id="containerPm25">
             <div class='aqi-label'>Indoor AQI (PM2.5)</div>
-            <div class='aqi' id="i_aqiPm25"></div>
-            <div class='pm-label' id="i_pm25"></div>
+            <div class='aqi' id="aqiPm25"></div>
+            <div class='pm-label' id="pm25"></div>
         </div>
-        <div class='aqi-container' id="i_containerPm10">
+        <div class='aqi-container' id="containerPm10">
             <div class='aqi-label'>Indoor AQI (PM10)</div>
-            <div class='aqi' id="i_aqiPm10"></div>
-            <div class='pm-label' id="i_pm10"></div>
+            <div class='aqi' id="aqiPm10"></div>
+            <div class='pm-label' id="pm10"></div>
         </div>
     </div>
-    <!--<div class="container">
-        <div class='time' id="i_time"></div>
-        <div class='aqi-container' id="o_containerPm25">
-            <div class='aqi-label'>Outdoor AQI (PM2.5)</div>
-            <div class='aqi' id="o_aqiPm25"></div>
-            <div class='pm-label' id="o_pm25"></div>
-        </div>
-        <div class='aqi-container' id="o_containerPm10">
-            <div class='aqi-label'>Outdoor AQI (PM10)</div>
-            <div class='aqi' id="o_aqiPm10"></div>
-            <div class='pm-label' id="o_pm10"></div>
-        </div>
-    </div>-->
     <div class="chart">
         <table border="0" width="200%" cellspacing="2" cellpadding="5">
             <tbody>
