@@ -1,5 +1,4 @@
 .container {
-    background-color: pink;
     font-family: 'News Cycle', sans-serif;
     margin-left: auto;
     margin-right: auto;
@@ -72,8 +71,8 @@ h2 {
     font-family: 'News Cycle', sans-serif;
     font-size: 20px;
     line-height: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
     text-align: left;
     max-width: 600px;
 }
